@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import { Satellite } from '../satellite';
+import { Component, OnInit, Input } from '@angular/core';
+import { Satellite } from '../satellite';
 
 @Component({
   selector: 'app-orbit-list',
@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class OrbitListComponent implements OnInit {
+  @Input() satellites: Satellite[];
   constructor() { 
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   // @Input() satellites: Satellite[] = [];

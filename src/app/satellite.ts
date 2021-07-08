@@ -1,4 +1,7 @@
+import { style } from "@angular/animations";
+
 export class Satellite {
+
     name: string;
     orbitType: string;
     type: string;
@@ -11,6 +14,15 @@ export class Satellite {
         this.orbitType = orbitType;
         this.operational = operational;
         this.launchDate = launchDate;
+    }
+
+    shouldShowWarning(): boolean {
+        if (this.type.toLowerCase() === "space debris") {
+            //warning class
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
